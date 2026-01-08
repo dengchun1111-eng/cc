@@ -1,0 +1,65 @@
+{ 
+  "foundations": [
+    {
+      "foundation_id": "fnd_001",
+      "name": "某爱心基金会",
+      "transparency": {
+        "foundation_id": "fnd_001",
+        "latest_annual_report_year": 2024,
+        "annual_report_published": "partial",
+        "annual_report_url": "https://example.org/report2024.pdf",
+        "website_disclosure_score": 72,
+        "disclosures_missing": ["项目成效", "财务明细"],
+        "evidence": [
+          {"type": "pdf", "url": "https://example.org/report2024.pdf", "extracted_at": "2026-01-01T10:00:00Z"},
+          {"type": "screenshot", "url": "https://example.org/screenshot1.png", "extracted_at": "2026-01-02T10:00:00Z"}
+        ],
+        "ui_status": "yellow",
+        "status_reasons": ["年报为部分披露", "官网缺少财务明细"]
+      },
+      "financials": [
+        {
+          "foundation_id": "fnd_001",
+          "year": 2024,
+          "total_revenue": 1000000,
+          "total_expense": 900000,
+          "program_expense": 600000,
+          "program_expense_ratio": 66.67,
+          "reserve_months": 8,
+          "revenue_diversity_index": 65,
+          "financial_tables_verified": true,
+          "raw_source_url": "https://example.org/financials2024.csv",
+          "evidence": [{"type":"csv","url":"https://example.org/financials2024.csv","extracted_at":"2026-01-01T10:00:00Z"}],
+          "ui_status": "green",
+          "status_reasons": []
+        },
+        {
+          "foundation_id": "fnd_001",
+          "year": 2023,
+          "total_revenue": 700000,
+          "total_expense": 650000,
+          "program_expense": 350000,
+          "program_expense_ratio": 53.85,
+          "reserve_months": 4,
+          "revenue_diversity_index": 55,
+          "financial_tables_verified": false,
+          "raw_source_url": "https://example.org/financials2023.pdf",
+          "evidence": [{"type":"pdf","url":"https://example.org/financials2023.pdf","extracted_at":"2025-01-01T10:00:00Z"}],
+          "ui_status": "yellow",
+          "status_reasons": ["财务表结构未校验"]
+        }
+      ],
+      "latest_assessment": {
+        "assessed_at": "2026-01-08T10:00:00Z",
+        "score_total": 78.5,
+        "grade": "B",
+        "dimensions": {
+          "governance": {"score": 80, "evidence": ["https://example.org/registration"]},
+          "transparency": {"score": 70, "evidence": ["https://example.org/report2024.pdf"]},
+          "financial_health": {"score": 85, "evidence": ["https://example.org/financials2024.csv"]}
+        },
+        "notes": "自动评估 + 人工复核通过"
+      }
+    }
+  ]
+}
